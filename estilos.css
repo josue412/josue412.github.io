@@ -1,0 +1,346 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-height: 400px;
+}
+
+.slider img {
+    width: 100%;
+    flex-shrink: 0;
+    animation: slide 20s infinite;
+}
+
+@keyframes slide {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+    75%, 95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+section {
+    padding: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #4CAF50;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+}
+
+#productos-mapa {
+    padding: 2rem;
+    text-align: center;
+}
+
+#productos-mapa h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 1.5rem;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap; /* Asegura que sea responsivo */
+}
+
+.cubos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.cubo {
+    width: 200px;
+    height: 300px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.cubo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.cubo .precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    margin: 0;
+    background-color: #f9f9f9;
+    width: 100%;
+    text-align: center;
+}
+
+.mapa {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
+}
+
+.mapa h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación para los cubos */
+.cubo {
+    width: 200px;
+    height: 300px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cubo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.cubo .precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    margin: 0;
+    background-color: #f9f9f9;
+    width: 100%;
+    text-align: center;
+}
+
+/* Efecto hover */
+.cubo:hover {
+    transform: translateY(-10px); /* Eleva el cubo */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    border-color: #4CAF50; /* Cambia el color del borde */
+}
+
+.cubo:hover img {
+    filter: brightness(0.9); /* Oscurece un poco la imagen al pasar el cursor */
+}
+
+/* Estilo global para el fondo de la página */
+body {
+    background-color: #f0f8f4; /* Un verde muy claro para el fondo */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del contenedor principal */
+.bg-white {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título */
+.text-2xl {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6C8B79; /* Verde principal */
+}
+
+/* Formulario y campos de entrada */
+input[type="text"], input[type="email"], input[type="date"], input[type="time"] {
+    border: 1px solid #A3B29C; /* Un verde suave para los bordes */
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto cuando el input es enfocado */
+input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, input[type="time"]:focus {
+    border-color: #4F6D47; /* Verde más oscuro en el borde cuando está enfocado */
+    outline: none;
+}
+
+/* Estilo de las etiquetas */
+label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4F6D47; /* Verde para las etiquetas */
+    margin-bottom: 5px;
+}
+
+/* Estilo del botón de envío */
+button {
+    background-color: #4CAF50; /* Verde principal */
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover sobre el botón */
+button:hover {
+    background-color: #5A7365; /* Verde más oscuro al pasar el ratón */
+}
+
+/* Espaciado entre los elementos del formulario */
+.mb-4 {
+    margin-bottom: 20px;
+}
+
+/* Margen para el contenedor general */
+.p-6 {
+    padding: 24px;
+}
+
+/* Texto de los botones y campos */
+.text-gray-700 {
+    color: #4A5C48; /* Verde oscuro para el texto */
+}
+
+/* Estilo del borde de los inputs */
+.border-gray-300 {
+    border-color: #A3B29C;
+}
+
+/* Estilo del formulario cuando está centrado en la página */
+.max-w-md {
+    max-width: 400px;
+}
+
+/* Centrado del formulario en la página */
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Bordes redondeados y sombras */
+.rounded-lg {
+    border-radius: 12px;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cuerpo {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.seccion-cortes {
+    text-align: center;
+    padding: 30px;
+}
+
+.seccion-cortes h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contenedor-cubos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.cubo {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.cubo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.cubo:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
